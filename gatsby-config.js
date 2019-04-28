@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'TIL.ACADEMY',
     author: '',
-    description: 'Weekly updates on cool tech in a Today I Learned fashion'
+    description: 'Weekly updates on cool tech in a Today I Learned fashion',
+    siteUrl: 'https://til.academy'
   },
   plugins: [
     {
