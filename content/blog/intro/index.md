@@ -1,5 +1,5 @@
 ---
-title: Introducing TIL.Academy
+title: Introducing Today I Learned.Academy
 date: "2019-04-28T22:12:03.284Z"
 description: Hey, Excited to announce a short and summarized blog that everyone can contribute!
 ---

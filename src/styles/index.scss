@@ -1,0 +1,56 @@
+a {
+  text-shadow: none;
+}
+
+h3 a {
+  box-shadow: none;
+}
+
+.bio {
+  margin-bottom: 3.625rem;
+}
+
+header {
+  h1 {
+    font-size: 2.82843rem;
+    line-height: 3.625rem;
+    margin-bottom: 2.175rem;
+    margin-top: 0px;
+    a {
+      box-shadow: none;
+      text-decoration: none;
+      color: inherit;    
+    }
+  }
+  h3 {
+    font-family: Montserrat, sans-serif;
+    margin-top: 0px;    
+  }
+}
+
+hr {
+  margin-bottom: 1.45rem;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 52.2rem;
+  padding: 2.175rem 1.0875rem;  
+}
+
+.date {
+  font-size: 0.87055rem;
+  line-height: 1.45rem;
+  display: block;
+  margin-bottom: 1.45rem;
+  margin-top: -1rem;  
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0px;  
+}

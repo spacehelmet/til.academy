@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: 'TIL.ACADEMY',
+    title: 'Today I Learned.Academy',
     author: '',
     description: 'Weekly updates on cool tech in a Today I Learned fashion',
     siteUrl: 'https://til.academy'
   },
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
