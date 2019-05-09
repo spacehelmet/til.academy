@@ -19,7 +19,7 @@ class BlogPostTemplate extends React.Component {
         />
         <h1>{post.frontmatter.title}</h1>
         <p className="date">
-          {post.frontmatter.date}
+          {post.frontmatter.date} {post.frontmatter.author}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr/>
@@ -53,7 +53,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        author
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -62,6 +61,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        author
         date(formatString: "MMMM DD, YYYY")
         description
       }
