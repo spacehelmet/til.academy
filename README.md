@@ -1,9 +1,6 @@
 <p align="center">
   <img alt="TIL" src="https://github.com/tterian/til.academy/blob/master/content/assets/til-icon.png" width="60" />
 </p>
-<h1 align="center">
-  Today I Learned
-</h1>
 
 A simple and open source blog on tech stuff in "today I learned" fashion.
 
