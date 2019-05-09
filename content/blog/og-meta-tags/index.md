@@ -8,8 +8,7 @@ description: OG tags will help you drive more traffic to your website.
 [Open Graph](http://ogp.me/) protocol is a web standard originally developed by Facebook that turns any webpage into a graph object with title, description, image and so on. Even though there is no direct correlation between OG meta tags and improved SEO rankings, it still drives more traffic to your webpage by making it more "attractive" in social networks (Facebook, Twitter, Linkedin, etc).
 
 An example of a link shared in Twitter that has og:image and og:title
-![og-example](./og-example.png)
-
+<img src="./og-example.png" alt="Kitten" title="OG tag example" />
 
 ## Adding OG (and not only) meta tags into your React app
 
