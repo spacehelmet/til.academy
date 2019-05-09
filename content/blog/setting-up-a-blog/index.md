@@ -1,6 +1,7 @@
 ---
 title: Setting up a blog
 date: "2019-04-28T22:40:32.169Z"
+author: "tterian"
 description: Setting up a blog with Gatsby and Netlify.
 ---
 
