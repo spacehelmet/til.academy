@@ -8,7 +8,7 @@ description: OG tags will help you drive more traffic to your website.
 [Open Graph](http://ogp.me/) protocol is a web standard originally developed by Facebook that turns any webpage into a graph object with title, description, image and so on. Even though there is no direct correlation between OG meta tags and improved SEO rankings, it still drives more traffic to your webpage by making it more "attractive" in social networks (Facebook, Twitter, Linkedin, etc).
 
 An example of a link shared in Twitter that has og:image and og:title
-<img src="./og-example.png" alt="Kitten" title="OG tag example" />
+<img src="./og-example.png" alt="og-tags" title="OG tag example" />
 
 ## Adding OG (and not only) meta tags into your React app
 
@@ -36,7 +36,10 @@ Without further due let's jump into newly created React app with `create-react-a
 </html>
 ```
 
+## Dynamic tags
+
 Now, what if I need to generate tags dynamically for every page? That's easy!
+
 We'll use [React Helmet](https://github.com/nfl/react-helmet). So let's create a separate component for document head management, which will dynamically set title, description, image for the page.
 
 ```Javascript
