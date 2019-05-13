@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import kebabCase from "lodash/kebabCase"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -20,6 +21,14 @@ class BlogPostTemplate extends React.Component {
         <h1>{post.frontmatter.title}</h1>
         <p className="date">
           {post.frontmatter.date} {post.frontmatter.author}
+          <br/>
+          {post.frontmatter.tags.map( (tag) => {
+            return (
+              <em key={kebabCase(tag)}>
+                <Link to={`/tags/${kebabCase(tag)}/`}>#{tag}</Link><span> </span>
+              </em>
+            )
+          })}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr/>
@@ -64,6 +73,7 @@ export const pageQuery = graphql`
         author
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }

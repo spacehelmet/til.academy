@@ -1,27 +1,27 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
 import kebabCase from "lodash/kebabCase"
 
+import { Link, graphql } from "gatsby"
 import '../styles/index.scss';
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-class BlogIndex extends React.Component {
+class Tags extends React.Component {
   render() {
-    const { data, location } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+    const { tag } = this.props.pageContext
+    const { edges } = this.props.data.allMarkdownRemark
+    const siteTitle = this.props.data.site.siteMetadata.title
 
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="All posts"
+          title={tag}
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <Bio />
-        {posts.map(({ node }) => {
+        <h1>{tag} Posts</h1>
+
+        {edges.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div key={node.fields.slug}>
@@ -30,7 +30,7 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date} {node.frontmatter.author} </small>
+              <small>{node.frontmatter.date} {node.frontmatter.author}</small>
               <p
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
@@ -46,31 +46,37 @@ class BlogIndex extends React.Component {
             </div>
           )
         })}
+
+        <Link to="/tags">All tags</Link>
       </Layout>
     )
   }
 }
 
-export default BlogIndex
+export default Tags
 
 export const pageQuery = graphql`
-  query {
+  query($tag: String) {
     site {
       siteMetadata {
         title
       }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    }    
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
+    ) {
+      totalCount
       edges {
         node {
-          excerpt
           fields {
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
             author
+            date
             description
             tags
           }

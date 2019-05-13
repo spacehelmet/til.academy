@@ -3,6 +3,7 @@ title: Setting up a blog
 date: "2019-04-28T22:40:32.169Z"
 author: "tterian"
 description: Setting up a blog with Gatsby and Netlify.
+tags: ["gatsby", "netlify", "blog"]
 ---
 
 Alright, here we go! If you have decided to create a new blog and don't know where to start then this guide is just for you. It will walk you through creating and hosting your own blog.
