@@ -21,8 +21,12 @@ There are multiple solutions in the market, however the one that stands out is [
 
 The only drawback, of course, if we can call it a drawback, is that both developers need to have zoom app installed.
 
+On the other hand, you can also use [Slack](https://slack.com) (there is a high chance that both parties already have it). Good option for “accidental pairing”!
+
 ## ⚒ IDE Session Share
 
 If you are using Visual Studio Code then there is a nice bonus tool for you! Microsoft has released a [nice extension](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) to their IDE that let's you share your session with anyone.
 
 It has an audio support too! However, you'll need a screen sharing tool in combination with it.
+
+Also, it's worth to checkout [Floobits](https://floobits.com/), an option for devs who don’t use VS Code.
