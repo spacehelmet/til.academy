@@ -34,12 +34,14 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    // Create blog posts pages.
+    // Create blog posts pages
     const posts = result.data.allMarkdownRemark.edges
+    let tags = [];
 
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
+      tags = tags.concat(post.node.frontmatter.tags)
 
       createPage({
         path: post.node.fields.slug,
@@ -52,19 +54,7 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    // Tag pages:
-    let tags = []
-    // Iterate through each post, putting all found tags into `tags`
-    _.each(posts, edge => {
-      if (_.get(edge, "node.frontmatter.tags")) {
-        tags = tags.concat(edge.node.frontmatter.tags)
-      }
-    })
-    console.log(tags);
-    // Eliminate duplicate tags
-    tags = _.uniq(tags)
-
-    // Make tag pages
+    // Create tag pages
     tags.forEach(tag => {
       createPage({
         path: `/tags/${_.kebabCase(tag)}/`,

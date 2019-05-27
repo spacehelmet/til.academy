@@ -4,7 +4,7 @@ function Bio() {
   return (
     <div className="bio">
       <p>
-        Weekly updates on cool tech in a <em>Today I Learned</em> fashion
+        Weekly updates on cool tech and not only
       </p>
     </div>
   )
