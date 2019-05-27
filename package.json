@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-blog",
   "private": true,
-  "description": "Weekly updates on cool tech in a Today I Learned fashion",
+  "description": "Weekly updates on cool tech and not only",
   "version": "0.1.0",
   "author": "Them",
   "dependencies": {

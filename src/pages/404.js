@@ -13,7 +13,7 @@ class NotFoundPage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="404: Not Found" />
         <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+        <img src="https://media.giphy.com/media/VwoJkTfZAUBSU/giphy.gif" alt="404" />
       </Layout>
     )
   }

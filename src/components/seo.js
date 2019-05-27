@@ -44,6 +44,10 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: title,
         },
         {
+          property: `og:image`,
+          content: 'til-icon.png',
+        },
+        {
           property: `og:description`,
           content: metaDescription,
         },
