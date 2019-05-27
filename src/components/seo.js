@@ -45,7 +45,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: `og:image`,
-          content: 'til-icon.png',
+          content: 'https://www.til.academy/til-icon.png',
         },
         {
           property: `og:description`,
